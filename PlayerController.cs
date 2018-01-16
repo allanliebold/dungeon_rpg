@@ -22,5 +22,17 @@ public class PlayerController : MonoBehaviour {
       transform.localScale = Vector3.one;
     else if(moveDelta.x < 0)
       transform.localScale = new Vector3(-1, 1, 1);
+
+    hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y),
+                            Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Blocking", "Characters"));
+    if(hit.collider == null) {
+      transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
+    }
+
+    hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0),
+                            Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Blocking", "Characters"));
+    if(hit.collider == null) {
+      transform.Translate(0, moveDelta.x * Time.deltaTime, 0);
+    }
   }
 }
