@@ -18,8 +18,14 @@ public class CollisionObject : MonoBehaviour{
       if(hits[i] == null)
         continue;
 
+        OnCollide(hits[i]);
+
         Debug.Log(hits[i].name);
         hits[i] = null;
     }
+  }
+
+  protected virtual void OnCollide(Collider2D collider) {
+    Debug.Log(collider.name);
   }
 }
