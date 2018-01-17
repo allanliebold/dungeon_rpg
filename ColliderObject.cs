@@ -11,4 +11,15 @@ public class CollisionObject : MonoBehaviour{
   protected virtual void Start() {
     boxCollider = GetComponent<BoxCollider2D>();
   }
+
+  protected virtual void Update() {
+    boxCollider.OverlapCollider(filter, hits);
+    for (int i = 0; i < hits.Length; i++) {
+      if(hits[i] == null)
+        continue;
+
+        Debug.Log(hits[i].name);
+        hits[i] = null;
+    }
+  }
 }
