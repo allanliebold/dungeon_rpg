@@ -10,7 +10,7 @@ public class Chest : Collectable {
   protected override void OnCollect(Collider2D collider) {
     if(!collected) {
       collected = true;
-      Debug.Log("Collected treasure.");
+      Debug.Log("Player collected" + goldAmount + " gold");
     }
   }
 }
