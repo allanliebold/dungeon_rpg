@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Chest : Collectable {
-  protected override void OnCollide(Collider2D collider) {
-
+  protected override void OnCollect(Collider2D collider) {
+    collected = true;
   }
 }
