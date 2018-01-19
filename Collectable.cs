@@ -12,6 +12,6 @@ public class Collectable : CollisionObject {
   }
 
   protected virtual void OnCollect() {
-
+    collected = true;
   }
 }
