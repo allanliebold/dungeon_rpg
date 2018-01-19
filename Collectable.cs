@@ -4,4 +4,8 @@ using System.Collections.Generic;
 
 public class Collectable : CollisionObject {
   protected bool collected;
+
+  protected virtual void OnCollect() {
+    
+  }
 }
