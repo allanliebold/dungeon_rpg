@@ -11,6 +11,7 @@ public class Portal : ColliderObject
       {
         //Teleport the Player
         string sceneName = sceneNames[Random.Range(0, sceneNames.Length)];
+        SceneManager.LoadScene(sceneName);
       }
     }
 
