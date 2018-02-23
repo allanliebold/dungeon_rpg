@@ -12,4 +12,6 @@ public class Game Manager : MonoBehaviour
   }
 
   public List<Sprite> playerSprites;
+  public List<Sprite> weaponSprites;
+  public List<int> weaponPrices;
 }
