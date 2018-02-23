@@ -10,4 +10,6 @@ public class Game Manager : MonoBehaviour
   {
     instance = this;
   }
+
+  public List<Sprite> playerSprites;
 }
